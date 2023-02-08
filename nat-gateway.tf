@@ -40,7 +40,7 @@ resource "aws_nat_gateway" "nat_gateway_az2" {
   }
 
   # to ensure proper ordering, it is recommended to add an explicit dependency
-  # on the internet gateway for the vpc
+  # on the internet gateway for the vpc.
   depends_on = [aws_internet_gateway.internet_gateway]
 }
 

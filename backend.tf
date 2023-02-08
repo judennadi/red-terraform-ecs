@@ -2,9 +2,9 @@
 
 terraform {
   backend "s3" {
-    bucket         = "hazard124"
+    bucket         = var.s3_bucket
     key            = "red-ecs/terraform.tfstate"
-    region         = "us-east-1"
+    region         = var.region
     profile        = "default"
     dynamodb_table = "terraform-state-lock"
   }

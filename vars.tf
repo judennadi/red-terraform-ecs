@@ -11,6 +11,10 @@ variable "environment" {
   description = "Project environment"
   type        = string
 }
+variable "s3_bucket" {
+  description = "S3 bucket"
+  type        = string
+}
 
 # vpc variables
 variable "vpc_cidr" {

@@ -20,6 +20,7 @@ resource "aws_db_instance" "database_instance" {
   username               = var.db_username
   password               = var.db_password
   skip_final_snapshot    = true
+  availability_zone      = data.aws_availability_zones.available_zones.names[1]
   multi_az               = false
   db_subnet_group_name   = aws_db_subnet_group.database_subnet_group.name
   vpc_security_group_ids = [aws_security_group.database_security_group.id]

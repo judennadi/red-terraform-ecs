@@ -48,3 +48,16 @@ variable "private_data_subnet_az2_cidr" {
   type        = string
 }
 
+# database config
+variable "db_name" {
+  description = "database name"
+  type        = string
+}
+variable "db_username" {
+  description = "database username"
+  type        = string
+}
+variable "db_password" {
+  description = "database password"
+  type        = string
+}
